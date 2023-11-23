@@ -1,10 +1,19 @@
 import './globals.css'
 import styles from "@/app/layout.module.css"
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 
+
+
+export const metadata:Metadata = {
+  title:'next',
+  description:'next_study'
+}
+
 const RootLayout = ({children}:{children:React.ReactNode}) => {
-   return(
+
+  return(
     <>
       <html lang="en">
       <head/>

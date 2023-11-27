@@ -6,6 +6,9 @@ export type Product = {
     name:string;
     price:number;
 }
+
+export const revalidate = 3;
+
 export async function getProducts():Promise<Product[]> {
     // 현재 실행중인 노드 파일의 위치
     // path.join => 경로를 합쳐줌

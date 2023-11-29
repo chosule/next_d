@@ -1,6 +1,4 @@
-export default function ProductsLoading() {
-     
-     return(
-        <div>...로딩중</div>
-     )
+
+export default function Productsloading() {
+  return <div>로딩중입니다...ㅎ</div>;
 }

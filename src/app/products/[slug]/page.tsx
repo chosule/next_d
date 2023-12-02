@@ -2,9 +2,10 @@ import Link from "next/link";
 import NotFound from "../../not-found";
 import { Metadata } from "next";
 import { getProduct, getProducts } from "@/service/products";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import GoOnclickBack from "@/components/GoOnclickBack";
 
 type Props = {
   params: {
@@ -27,7 +28,8 @@ export function generateMetadata({ params }: Props) {
 export default async function ProductPage({ params: { slug } }: Props) {
   const product = await getProduct(slug);
   if (!product) {
-    notFound();
+    // notFound();
+    redirect("/products");
   }
   return (
     <>
@@ -38,6 +40,7 @@ export default async function ProductPage({ params: { slug } }: Props) {
         width={200}
         height={200}
       />
+      <GoOnclickBack />
     </>
   );
 }

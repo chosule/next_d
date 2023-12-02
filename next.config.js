@@ -19,6 +19,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/chosule",
+        destination: "/about/me/chosule",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
